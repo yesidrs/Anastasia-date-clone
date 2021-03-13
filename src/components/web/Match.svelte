@@ -1,13 +1,6 @@
-<script>
+<script lang="ts">
   import Menu from '../utils/Menu.svelte';
-
-  let images = [
-    'https://api4.anastasiadate.com/v2/ladies/2038015/photos/cd2ca67b42913f5a8ec9f45fc15211bba0ef30cd.316x450.gallery',
-    'https://api7.anastasiadate.com/v2/ladies/2000273/photos/cc4b0b795557bc41bb9e42fb43aeec08f3c01387.316x450.gallery',
-    'https://api9.anastasiadate.com/v2/ladies/1922573/photos/eeeac7c430b71446ab926e94e25c8538f6bfdc52.316x450.gallery',
-    'https://api8.anastasiadate.com/v2/ladies/2047662/photos/0e7255996ee5a6d393193efbe26b11178433805b.316x450.gallery',
-    'https://api3.anastasiadate.com/v2/ladies/2007244/photos/01e2c52568fb476e8e420a2754055566d0c49214.316x450.gallery',
-  ];
+  import { users } from '../../services/users';
 </script>
 
 <style lang="scss">
@@ -15,14 +8,65 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 1rem 5rem;
+    padding: 1rem 1rem;
+    border: 1px solid #d0d3d4;
+    box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.5);
 
     figure {
+      position: relative;
       img {
         width: 100%;
         height: 45.8rem;
         border: 1px solid #d0d3d4;
         margin-top: 1rem;
+      }
+      p {
+        position: absolute;
+        margin-left: 0;
+        margin-right: 0;
+        left: 0;
+        right: 0;
+        bottom: 60px;
+        text-align: center;
+        color: white;
+        font-size: 3rem;
+        text-shadow: 2px 2px 2px black;
+      }
+      button {
+        color: white;
+        font-weight: 500;
+        bottom: 23px;
+        padding: 0.6rem 1rem;
+        border-radius: 8px;
+        z-index: 1;
+        i {
+          margin-right: 1rem;
+        }
+      }
+      button:first-of-type {
+        position: absolute;
+        left: 20px;
+        background-color: #005cc3;
+      }
+      button:last-of-type {
+        position: absolute;
+        right: 20px;
+        background-color: #9ccd1b;
+      }
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 15%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(
+          to top,
+          black,
+          rgba(black, 0)
+        );
+        opacity: 0.9;
       }
     }
   }
@@ -31,8 +75,15 @@
 <section>
   <div class="match">
     <Menu />
-    {#each images as img}
-      <figure><img src={img} alt="" /></figure>
+    {#each users as user}
+      <figure>
+        <img src={user.img} alt="" />
+        <p>{user.name}, {user.age}</p>
+        <button>
+          <i class="fas fa-video" />Cam Share</button>
+        <button>
+          <i class="fas fa-comment" />Live Chat</button>
+      </figure>
     {/each}
   </div>
 </section>

@@ -4,11 +4,12 @@
   import NotFound from './pages/NotFound.svelte';
 
   export let url: string;
+  url = '';
 </script>
 
 <style>
   :global(.container) {
-    width: 85%;
+    width: 80%;
     max-width: 1280px;
     margin: auto;
   }
