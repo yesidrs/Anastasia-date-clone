@@ -1,4 +1,6 @@
 <style lang="scss">
+  @import '../../scss/utils.scss';
+
   .menu {
     display: flex;
     justify-content: space-between;
@@ -28,6 +30,12 @@
           width: 7.4rem;
           height: 9.4rem;
           border: 1px solid #d0d3d4;
+          transition: 0.3s ease-in-out;
+
+          &:hover {
+            background-color: #f0f3f4;
+          }
+
           i {
             font-size: 3rem;
             margin-bottom: 1rem;
