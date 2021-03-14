@@ -8,11 +8,14 @@
   url = '';
 </script>
 
-<style>
+<style lang="scss">
   :global(.container) {
     width: 80%;
     max-width: 1280px;
     margin: auto;
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
   }
 </style>
 

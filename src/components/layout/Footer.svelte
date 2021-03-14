@@ -38,6 +38,9 @@
         }
       }
     }
+    @media (max-width: 462px) {
+      flex-direction: column;
+    }
   }
 </style>
 
