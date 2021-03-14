@@ -53,43 +53,43 @@
   <div class="options">
     <h1 class="title">At the moment <br /> you have</h1>
     <div class="group">
-      <a href="/" class="option">
+      <a href="#" class="option">
         <i class="far fa-envelope" />
         <span>New <br /> Emails</span>
       </a>
-      <a href="/" class="option">
+      <a href="#" class="option">
         <i class="fas fa-user-friends" />
         <span>Online <br /> Members</span>
       </a>
-      <a href="/" class="option">
+      <a href="#" class="option">
         <i class="far fa-star" />
         <span>Contact <br /> List</span>
       </a>
     </div>
     <div class="group">
-      <a href="/" class="option">
+      <a href="#" class="option">
         <i class="fas fa-phone" />
         <span>Phone <br /> Calls</span>
       </a>
-      <a href="/" class="option">
+      <a href="#" class="option">
         <i class="fas fa-gift" />
         <span>Virtual <br /> Gifts</span>
       </a>
-      <a href="/" class="option">
+      <a href="#" class="option">
         <i class="fas fa-glass-cheers" />
         <span>Delivered <br /> Orders</span>
       </a>
     </div>
     <div class="group">
-      <a href="/" class="option">
+      <a href="#" class="option">
         <i class="far fa-question-circle" />
         <span>Help <br /> Center</span>
       </a>
-      <a href="/" class="option">
+      <a href="#" class="option">
         <i class="far fa-check-circle" />
         <span>Bonus <br /> Points</span>
       </a>
-      <a href="/" class="option">
+      <a href="#" class="option">
         <i class="fas fa-fire" />
         <span>Subscribe</span>
       </a>

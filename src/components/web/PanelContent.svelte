@@ -7,6 +7,7 @@
     margin-top: 1rem;
     flex: 1;
     margin-left: 5rem;
+    margin-right: 1rem;
     h1 {
       color: #d2202d;
       font-size: 2rem;
@@ -16,6 +17,7 @@
       justify-content: space-between;
       align-items: center;
       font-size: 1.4rem;
+      margin-bottom: 1rem;
     }
     label {
       margin-right: 1rem;

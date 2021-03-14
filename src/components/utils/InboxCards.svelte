@@ -1,5 +1,10 @@
+<script>
+  import { messages } from '../../services/inbox';
+</script>
+
 <style lang="scss">
   .inbox-card {
+    margin-bottom: 1.5rem;
     .card-header {
       display: flex;
       justify-content: space-between;
@@ -19,11 +24,18 @@
       background-color: #ffff99;
       border: 1px solid #d0d3d4;
       padding: 1rem 1rem 0 0.5rem;
+
+      @media (max-width: 768px) {
+        justify-content: space-around;
+      }
       .user-image {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-left: 0.5rem;
+        @media (max-width: 768px) {
+          margin-left: -10px;
+        }
         img {
           border: 1px solid black;
         }
@@ -46,6 +58,10 @@
         display: flex;
         flex-direction: column;
         margin-left: 1rem;
+
+        @media (max-width: 768px) {
+          margin-left: 0;
+        }
         h3 {
           text-decoration: underline;
           font-size: 1.5rem;
@@ -99,6 +115,10 @@
           background: url('https://64ad.itocd.net/www/img/MailSystemEx/big-btn-free-ribbon.png?v7ab68f2a');
           background-repeat: no-repeat;
         }
+
+        @media (max-width: 768px) {
+          display: none;
+        }
       }
       .actions {
         display: flex;
@@ -124,40 +144,40 @@
   }
 </style>
 
-<div class="inbox-card">
-  <div class="card-header">
-    <p>Maria's First Letter</p>
-    <p>Mar 14 2021</p>
-  </div>
-  <div class="card-content">
-    <input type="checkbox" />
-    <div class="user-image">
-      <img
-        src="https://35ad.itocd.net/www/images/girl/2109401-2109600/e6d1a3a5-c62d-4a99-b7e7-87183ee89866.jpg"
-        alt="" />
-      <p>ONLINE</p>
+{#each messages as msg}
+  <div class="inbox-card">
+    <div class="card-header">
+      <p>{msg.name}'s First Letter</p>
+      <p>Mar 14 2021</p>
     </div>
-    <div class="user-info">
-      <h3>Maria</h3>
-      <span>(ID: 123413698)</span>
-      <button><i class="fas fa-comment" />
-        Live Chat</button>
-      <div class="gift">
-        <i class="fas fa-gift" />
-        <p>Send Virtual Gift</p>
+    <div class="card-content">
+      <input type="checkbox" />
+      <div class="user-image">
+        <img src={msg.img} alt="" />
+        <p>ONLINE</p>
       </div>
-      <p class="age">Age: 42</p>
-    </div>
-    <div class="read-container">
-      <h3>This letter is unread.</h3>
-      <p>Click button below to read this letter.</p>
-      <button>Read The Letter</button>
-    </div>
-    <div class="actions">
-      <button>Read</button>
-      <button class="bg-yellow">Reply</button>
-      <button class="bg-transparent">All letters</button>
-      <button class="bg-yellow">Delete</button>
+      <div class="user-info">
+        <h3>{msg.name}</h3>
+        <span>(ID: 123413698)</span>
+        <button><i class="fas fa-comment" />
+          Live Chat</button>
+        <div class="gift">
+          <i class="fas fa-gift" />
+          <p>Send Virtual Gift</p>
+        </div>
+        <p class="age">Age: {msg.age}</p>
+      </div>
+      <div class="read-container">
+        <h3>This letter is unread.</h3>
+        <p>Click button below to read this letter.</p>
+        <button>Read The Letter</button>
+      </div>
+      <div class="actions">
+        <button>Read</button>
+        <button class="bg-yellow">Reply</button>
+        <button class="bg-transparent">All letters</button>
+        <button class="bg-yellow">Delete</button>
+      </div>
     </div>
   </div>
-</div>
+{/each}

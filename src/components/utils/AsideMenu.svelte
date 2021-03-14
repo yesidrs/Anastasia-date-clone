@@ -1,6 +1,7 @@
 <style lang="scss">
   aside {
     padding-top: 3rem;
+    margin-left: 1rem;
     .btn-subscribe {
       background-color: #9bcb1b;
       color: white;

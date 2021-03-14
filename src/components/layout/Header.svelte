@@ -26,6 +26,7 @@
         .nav-items {
           display: flex;
           justify-content: flex-end;
+          align-items: center;
           color: white;
           font-size: 1.5rem;
           font-weight: 500;
@@ -37,6 +38,16 @@
             span {
               margin-left: 1rem;
             }
+
+            &:last-of-type {
+              i {
+                font-size: 1.6rem;
+                border: 1px solid #d0d3d4;
+                padding: 0.5rem;
+                background-color: #d0d3d4;
+                border-radius: 6px;
+              }
+            }
           }
         }
       }
@@ -44,7 +55,7 @@
   }
 </style>
 
-<header class="header container">
+<header class="header container" id="header">
   <figure class="logo">
     <img
       src="//7ad.itocd.net/www/Specials/img/logo-anastasia-global.png"
@@ -72,6 +83,7 @@
           <span>|</span>
         </li>
         <li>
+          <i class="fas fa-user" />
           <a href="/" class="hover-border" use:link>My
             Profile</a>
         </li>
