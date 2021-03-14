@@ -66,7 +66,7 @@
         </li>
         <li>
           <a
-            href="/"
+            href="inbox"
             class="hover-border"
             use:link>Inbox</a>
           <span>|</span>

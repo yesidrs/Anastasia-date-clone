@@ -3,6 +3,7 @@
   import Home from './pages/Home.svelte';
   import NotFound from './pages/NotFound.svelte';
   import Broadcasts from './pages/Broadcasts.svelte';
+  import Inbox from './pages/Inbox.svelte';
 
   export let url: string;
   url = '';
@@ -24,5 +25,6 @@
     <Home />
   </Route>
   <Route path="broadcasts" component={Broadcasts} />
+  <Route path="inbox" component={Inbox} />
   <Route component={NotFound} />
 </Router>

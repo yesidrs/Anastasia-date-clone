@@ -59,6 +59,24 @@ export const broadcasts: Broadcast[] = [
     user: 'Liona',
     views: 12,
   },
+  {
+    img:
+      'https://api.dating.com/users/16808219342/photos/cb79987dd301f509.256x256.thumb-fd',
+    user: 'Sofia',
+    views: 66,
+  },
+  {
+    img:
+      'https://api.dating.com/users/79185035931/photos/0595d1d9786e544e.256x256.thumb-fd',
+    user: 'Yanina',
+    views: 44,
+  },
+  {
+    img:
+      'https://api.dating.com/users/78695406331/photos/a81a8440b8ead6bb.256x256.thumb-fd',
+    user: 'Alexandra',
+    views: 26,
+  },
 ];
 
 export const following: Broadcast[] = [
