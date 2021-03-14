@@ -38,26 +38,6 @@
               margin-left: 1rem;
             }
           }
-          .hover-border {
-            &::after {
-              content: '';
-              width: 0%;
-              height: 2px;
-              background-color: yellow;
-              position: absolute;
-              bottom: 0%;
-              left: 50%;
-              border-radius: 10px;
-              transition: all 500ms ease;
-            }
-
-            &:hover {
-              &::after {
-                left: 0%;
-                width: 100%;
-              }
-            }
-          }
         }
       }
     }
@@ -79,7 +59,7 @@
         </li>
         <li>
           <a
-            href="/"
+            href="broadcasts"
             class="hover-border"
             use:link>Broadcasts</a>
           <span>|</span>

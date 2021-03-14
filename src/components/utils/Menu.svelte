@@ -1,5 +1,5 @@
 <style lang="scss">
-  @import '../../scss/utils.scss';
+  @import '../../scss/icons.scss';
 
   .menu {
     display: flex;

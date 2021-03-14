@@ -9,6 +9,7 @@
     justify-content: space-between;
     background-color: #273746;
     padding: 0 2rem;
+    margin-top: 2rem;
 
     .copy {
       display: flex;
@@ -33,27 +34,6 @@
           position: relative;
           span {
             color: white;
-          }
-        }
-
-        .hover-border {
-          &::after {
-            content: '';
-            width: 0%;
-            height: 2px;
-            background-color: yellow;
-            position: absolute;
-            bottom: 0%;
-            left: 50%;
-            border-radius: 10px;
-            transition: all 500ms ease;
-          }
-
-          &:hover {
-            &::after {
-              left: 0%;
-              width: 100%;
-            }
           }
         }
       }

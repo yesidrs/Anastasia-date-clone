@@ -42,16 +42,16 @@
         i {
           margin-right: 1rem;
         }
-      }
-      button:first-of-type {
-        position: absolute;
-        left: 20px;
-        background-color: #005cc3;
-      }
-      button:last-of-type {
-        position: absolute;
-        right: 20px;
-        background-color: #9ccd1b;
+        &:first-of-type {
+          position: absolute;
+          left: 20px;
+          background-color: #005cc3;
+        }
+        &:last-of-type {
+          position: absolute;
+          right: 20px;
+          background-color: #9ccd1b;
+        }
       }
 
       &::after {
